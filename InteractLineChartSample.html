@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>Table With Embedded Line Chart</title>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="http://billmill.org/css/style.css" />
+<style>
+table {
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 2px solid #ddd;
+  padding: 8px;
+  font-weight: bold;
+}
+td {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+#chart {
+  padding: 0px;
+}
+.xaxislabel {
+  font-size: 9px;
+}
+#datatable {
+  font-family: "Arial";
+}
+#inputform, #header, #header2 {
+  font-family: "Arial";
+}
+</style>
+</head>
+<body>
+
+<h1 id = 'header'>Quote and Historical Prices Table Generator</h1>
+<form id = "inputform">
+  <fieldset>
+    <legend>Input Your Product Symbol to Begin</legend>
+    Product 1: <input type="text" id= "prod1"><br><br>
+    Product 2: <input type="text" id= "prod2"><br><br>
+    Product 3: <input type="text" id= "prod3"><br><br>
+    <input type="submit" value="Submit" id = "submitbutton", onclick = "connectToServer(getPrice); return false;">
+  </fieldset>
+</form>
+<br>
+<h2 id = 'header2'>Data Table of the Request</h2>
+<!-- "https://rawgit.com/liuwenbindo/tickergrid/master/linechart_ctrl.js" -->
+<div id="datatable"></div>
+<script src = "https://rawgit.com/VenusTechnologyVentures/ticker-grid/master/InteractLineChartCtrl_w_Input.js?token=ASc9Fzg890GvqsIOU4-Vd3PgK-SfCaO_ks5ZrZRnwA%3D%3D" ></script>
+</body>
+</html>
