@@ -2,10 +2,13 @@
 <html>
 <meta charset="utf-8">
 <head>
-<title>Table With Embedded Line Chart</title>
+<title>Quote and Historical Prices Table</title>
 <script src="http://d3js.org/d3.v4.min.js"></script>
-<link rel="stylesheet" href="http://billmill.org/css/style.css" />
+<link rel="stylesheet" href="https://codepen.io/stursby/pen/HdiJh.css" />
+<!-- "http://billmill.org/css/style.css" -->
+<!-- "https://codepen.io/alassetter/pen/cyrfB.css" -->
 <style>
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
 table {
   border-collapse: collapse;
 }
@@ -18,6 +21,9 @@ td {
   padding: 8px;
   border-top: 1px solid #ddd;
 }
+h1, h2, p, form {
+  color: white;
+}
 #chart {
   padding: 0px;
 }
@@ -25,10 +31,10 @@ td {
   font-size: 9px;
 }
 #datatable {
-  font-family: "Arial";
+  font-family: 'Open Sans', sans-serif;
 }
-#inputform, #header, #header2 {
-  font-family: "Arial";
+#inputform, #header, #header2, p {
+  font-family:'Open Sans', sans-serif;
 }
 </style>
 </head>
@@ -37,6 +43,7 @@ td {
 <h1 id = 'header'>Quote and Historical Prices Table Generator</h1>
 <form id = "inputform">
   <fieldset>
+    <p>Please input 3 security symbols you would like to check. (MarketView symbols format only)</p>
     <legend>Input Your Product Symbol to Begin</legend>
     Product 1: <input type="text" id= "prod1"><br><br>
     Product 2: <input type="text" id= "prod2"><br><br>
@@ -48,6 +55,7 @@ td {
 <h2 id = 'header2'>Data Table of the Request</h2>
 <!-- "https://rawgit.com/liuwenbindo/tickergrid/master/linechart_ctrl.js" -->
 <div id="datatable"></div>
+<p>Created By: Wenbin Liu (wl2581@columbia.edu)</p>
 <script src = "https://rawgit.com/liuwenbindo/tickergrid/master/InteractLineChartCtrl_new.js" ></script>
 </body>
 </html>
